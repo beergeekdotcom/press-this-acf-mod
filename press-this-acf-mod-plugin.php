@@ -86,8 +86,7 @@ function press_this_acf_mod_render_acf_fields() {
 }
 
 // Try to hook after content in Press This UI. If no such hook, fallback to admin_footer.
-add_action( 'press_this_html_after_content', 'press_this_acf_mod_render_acf_fields' );
-add_action( 'admin_footer', 'press_this_acf_mod_render_acf_fields' );
+add_action( 'admin_print_footer_scripts-press-this.php', 'press_this_acf_mod_render_acf_fields' );
 
 /**
  * Enqueue custom JS for custom taxonomy selection in Press This.
